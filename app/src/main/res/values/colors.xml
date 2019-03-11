@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#3988E7</color>
+
+    <color name="app_blue">#3988E7</color>
+    <color name="green">#03CA11</color>
+    <color name="lighter_gray">#f5f5f5</color>
+    <color name="text_color">#353535</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#FFAA00</color>
+    <color name="yellow_lt">#FAFABE</color>
+    <color name="light_blue">#A1C6F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="line_color">#dedede</color>
+    <color name="marker_color">#dd353535</color>
+    <color name="yellow_star">#FCFF00</color>
+    <color name="remove">#FE5438</color>
+    <color name="green_cpn">#32b44d</color>
+    <color name="blue_light">#e6f5fe</color>
+    <color name="green_light">#48B4FCD3</color>
+</resources>

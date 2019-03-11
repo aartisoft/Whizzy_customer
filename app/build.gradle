@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.sprvtec.whizzy"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 13
+        versionName "1.0.12"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+//        vectorDrawables.useSupportLibrary = true
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            multiDexKeepFile file('multidex-config.txt')
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //    compile 'com.github.aarsy.googlemapsanimations:googlemapsanimations:1.0.5'
+    implementation files('libs/commons-codec-1.4.jar')
+    implementation files('libs/httpclient-4.1.1.jar')
+    implementation files('libs/httpcore-4.1.jar')
+    implementation files('libs/httpmime-4.1.jar')
+    //loading gif image
+    //gif animation
+    //    implementation files('libs/PGSDK_v1.0.1.jar')
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    //    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-gcm:16.0.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    //    implementation 'com.google.android.gms:play-services-ads-lite:17.1.0'
+    //    implementation 'com.google.android.gms:play-services-ads:17.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-gass:17.1.2'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:7.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.firebase:firebase-dynamic-links:16.1.5'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-firestore:17.1.4'
+    implementation 'com.firebase:geofire-android:2.1.1'
+    implementation 'androidx.core:core:1.0.1'
+//    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+//    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+//    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation'androidx.annotation:annotation:1.0.1'
+//    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'androidx.core:core:1.0.1'
+//    implementation 'com.android.support:support-core-ui:28.0.0'
+    implementation'androidx.legacy:legacy-support-core-ui:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.razorpay:checkout:1.4.5'
+    implementation 'com.simpl.android:sdk:1.1.31'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+
+//    implementation ('com.wdullaer:materialdatetimepicker:4.1.0') {
+//        exclude group: 'com.android.support'
+//    }
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //    compile 'com.borax12.materialdaterangepicker:library:1.9'
+    //    implementation 'com.wdullaer:materialdatetimepicker:4.1.0'
+    implementation('com.github.bumptech.glide:glide:4.2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation('com.paytm:pgplussdk:1.2.3') {
+        transitive = true;
+    }
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+//    implementation project(':geofirestore')
+}
+
+
+repositories {
+    maven { url 'http://maven.getsimpl.com' }
+    mavenCentral()
+}
+
+apply plugin: 'com.google.gms.google-services'

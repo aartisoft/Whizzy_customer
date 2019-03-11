@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "205847096024",
+    "firebase_url": "https://whizzydevelopment.firebaseio.com",
+    "project_id": "whizzydevelopment",
+    "storage_bucket": "whizzydevelopment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205847096024:android:9c6e10d30c5c0d0a",
+        "android_client_info": {
+          "package_name": "com.sprvtec.whizzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205847096024-aj1f1vs72c5207478lqptlfv7dll3p49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1gphuuMVqUwFJmEn1znQ_s74S-xpAyic"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205847096024:android:9f2a9839c904e857",
+        "android_client_info": {
+          "package_name": "com.sprvtec.whizzydriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205847096024-aj1f1vs72c5207478lqptlfv7dll3p49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1gphuuMVqUwFJmEn1znQ_s74S-xpAyic"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

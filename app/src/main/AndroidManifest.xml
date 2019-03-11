@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sprvtec.whizzy">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <!--<uses-permission android:name="android.permission.READ_SMS" />-->
+
+    <application
+        android:name=".util.GlobalApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/launcher_icon"
+        android:label="@string/whizzy"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="com.simpl.android.sdk.merchant_id"
+            android:value="17558e76b13a0a9bbef32cc55a462b7b" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="Notification_Request" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ViewDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PaymentOptionsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LocationSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ScheduleTripDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CategoryGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.GridSubCategory"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.DropContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BuyItemsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".ui.EditBuyItemsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".ui.OptionsActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BusinessListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.PhoneContactsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AllTripsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.HomePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoadingActivity"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.DriverDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- <intent-filter> -->
+        <!-- <action android:name="Request_Accepted" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <activity
+            android:name=".ui.MapDragPickupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MapDragDropoffActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MapDragAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.EditAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MapDragEditLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SavedAddressesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.EndTripSummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.VehiclesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TripDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_jzypjLoXYk0SKH" />
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_icon_transperent" />
+
+        <activity
+            android:name=".ui.FareDetailsActivity"
+            android:label="@string/title_activity_fare_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!--FCM token stuff-->
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.SummaryTripDetails"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.fc.debug" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--<receiver-->
+            <!--android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"-->
+            <!--android:exported="false" />-->
+
+        <!--<service-->
+            <!--android:name="com.google.firebase.iid.FirebaseInstanceIdService"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter android:priority="-500">-->
+                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
+
+        <!--FCM token stuff end-->
+    </application>
+
+</manifest>

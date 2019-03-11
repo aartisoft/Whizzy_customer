@@ -1,0 +1,2 @@
+include ':app', ':googlemapsanimations', ':coverflow'
+//include ':app', ':geofirestore'

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/lighter_gray">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/empty"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/delete"
+            android:layout_toLeftOf="@+id/delete"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center"
+            android:text="@string/my_saved_add"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/empty"
+            android:padding="10dp"
+            android:src="@drawable/delete"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_lay"
+        android:background="@color/transparent"
+        android:hint="@string/name"
+        android:inputType="textPersonName|textCapWords"
+        android:maxLength="20"
+        android:padding="5dp"
+        android:textColor="@color/app_blue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label"
+        android:padding="5dp"
+        android:text="@string/address"
+        android:textColor="@color/text_color" />
+
+    <EditText
+        android:id="@+id/landmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:background="@color/transparent"
+        android:hint="@string/landmark1"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landmark"
+        android:layout_toStartOf="@+id/phone_book"
+        android:layout_toLeftOf="@+id/phone_book"
+        android:background="@color/transparent"
+        android:hint="@string/contact_name1"
+        android:inputType="textPersonName|textCapWords"
+        android:maxLength="20"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/phone_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landmark"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/empty"
+        android:padding="5dp"
+        android:src="@drawable/ic_phone_book" />
+
+    <EditText
+        android:id="@+id/contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_name"
+        android:layout_toStartOf="@+id/phone_book"
+        android:layout_toLeftOf="@+id/phone_book"
+        android:background="@color/transparent"
+        android:hint="@string/contact_number1"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_blue"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/save"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+</RelativeLayout>

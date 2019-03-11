@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_bg"
+    android:paddingLeft="30dp"
+    android:paddingTop="20dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="20dp">
+
+    <!--<TextView-->
+    <!--android:id="@+id/text"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/verification_code"-->
+    <!--android:textSize="20sp" />-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/do_you_really_delete"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue"
+            android:paddingLeft="3dp"
+            android:paddingTop="8dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="8dp"
+            android:text="@string/yes"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue"
+            android:paddingLeft="3dp"
+            android:paddingTop="8dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="8dp"
+            android:text="@string/no"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/on_behalf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/behalf"
+        android:textColor="@color/app_blue"
+        android:textSize="16sp"
+        android:visibility="gone" />
+    <!--<Button-->
+    <!--android:id="@+id/resend"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/ok"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="12dp"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:text="@string/resend_otp"-->
+    <!--android:textColor="@color/blue" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@+id/resend"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:background="@color/blue" />-->
+
+</RelativeLayout>

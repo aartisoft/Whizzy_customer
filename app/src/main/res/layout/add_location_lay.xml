@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/location_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_add_location" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/location_image"
+        android:layout_toRightOf="@+id/location_image"
+        android:maxLength="32"
+        android:text="@string/add_location"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/edit_name"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/text"
+        android:layout_toRightOf="@+id/text"
+        android:contentDescription="@string/empty"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/ic_edit"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignStart="@+id/text"
+        android:layout_alignLeft="@+id/text"
+        android:layout_toStartOf="@+id/address_edit"
+        android:layout_toLeftOf="@+id/address_edit"
+        android:textSize="13sp"
+        android:visibility="invisible" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@+id/address_text"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:background="@color/lighter_gray" />-->
+
+    <ImageView
+        android:id="@+id/address_edit"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/empty"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_edit"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
