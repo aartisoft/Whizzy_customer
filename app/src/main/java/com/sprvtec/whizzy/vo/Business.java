@@ -15,7 +15,6 @@ public class Business implements Parcelable {
     public Business() {
     }
 
-
     private Business(Parcel in) {
         bizitemid = in.readString();
         BusinessID = in.readString();
