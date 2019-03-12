@@ -11,7 +11,6 @@ import com.sprvtec.whizzy.R;
 
 public class AboutActivity extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
