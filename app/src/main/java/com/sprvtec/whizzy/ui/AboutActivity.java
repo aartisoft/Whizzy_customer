@@ -16,6 +16,7 @@ public class AboutActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         findViewById(R.id.back).setOnClickListener(v -> finish());
+        //gfdgdfg
     }
 
 
